@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add Person</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+<ul class="breadcrumb">
+    <li><a th:href="@{/}">Home</a></li>
+    <li><a th:href="@{/contentList}" style="margin-left: 10px">Content List</a></li>
+</ul>
+<h1 style="margin-left: 10px">Add Content</h1>
+    <!--<form th:action="@{/addContent}"-->
+          <!--th:object="${contentForm}" method="POST"> &lt;!&ndash;POST: khai báo lớp contentForm&ndash;&gt;-->
+
+        <!--<p style="margin-left: 16px">Enter Content:</p>-->
+        <!--<input type="text" placeholder="Enter content" th:field="*{content}" style="margin-left: 16px"/> &lt;!&ndash;Chỉ định nội dung vào getContent của contentForm đã được khai báo trước đó&ndash;&gt;-->
+        <!--<input type="submit" value="Add" style="margin-left: 5px"/>-->
+
+    <!--</form>-->
+
+<form action="#" method="post">
+    <p style="margin-left: 16px">Enter Content:</p>
+    <input type="text" placeholder="Enter content" name="content" value="" style="margin-left: 16px"/> <!--Chỉ định nội dung vào getContent của contentForm đã được khai báo trước đó--><!--Chỉ định nội dung vào getContent của contentForm đã được khai báo trước đó-->
+    <input type="submit" value="Add" style="margin-left: 5px"/><br/>
+    <a th:href="@{/contentList}" style="margin-left: 16px">Back</a>
+
+    </form>
+</body>
+</html>

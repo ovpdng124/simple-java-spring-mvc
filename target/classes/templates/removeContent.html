@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hello World</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<script>
+    function confirmAction() {
+        confirm("Are you sure?");
+    }
+
+</script>
+<body>
+<ul class="breadcrumb">
+    <li class="active"><a>Home</a></li>
+    <li><a th:href="@{/contentList}">Content List</a></li>
+</ul>
+<h1 style="margin-left: 10px">Are you sure?</h1>
+<table>
+    <form action="#" method="post">
+        <input type="submit" value="Yes" style="margin-left: 10px"/>
+    </form>
+    <form action="/contentList" method="get">
+        <input type="submit" value="No" style="margin-left: 10px">
+    </form>
+</table>
+</body>
+</html>

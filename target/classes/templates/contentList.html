@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Content List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+<ul class="breadcrumb">
+    <li><a th:href="@{/}">Home</a></li>
+    <li class="active"><a>Content List</a></li>
+</ul>
+<h1 style="margin-left: 10px">Content List</h1>
+<a href="addContent" style="margin-left: 10px">Add content</a>
+<br/><br/>
+<div>
+    <table class="table" id="content_container_table">
+
+        <tr>
+
+            <th>Content</th>
+            <th>Edit</th>
+            <th>Remove</th>
+
+        </tr>
+        <tr th:each="x : ${contents}">
+            <td th:utext="*{x.id}" hidden="true"></td>
+            <td th:utext="*{x.content}"></td>
+            <td>
+                <button><a th:href="@{editContent/}+${x.id}" th:utext="Edit"/></button>
+            </td>
+            <td>
+                <button><a th:href="@{removeContent/} + ${x.id}" th:utext="Remove"/></button>
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+</body>
+</html>
